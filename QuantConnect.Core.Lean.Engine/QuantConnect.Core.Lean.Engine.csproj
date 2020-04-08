@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Accord" Version="3.8.0" />
+    <PackageReference Include="DotNetZip" Version="1.13.7" />
+    <PackageReference Include="Fasterflect.Netstandard" Version="1.0.9" />
+    <PackageReference Include="FSharp.Core" Version="4.7.1" />
+    <PackageReference Include="MathNet.Numerics" Version="4.9.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="NodaTime" Version="2.4.7" />
+    <PackageReference Include="RestSharp" Version="106.10.1" />
+    <PackageReference Include="System.Runtime.Caching" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuantConnect.Core.Algorithm.CSharp\QuantConnect.Core.Algorithm.CSharp.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.AlgorithmFactory\QuantConnect.Core.AlgorithmFactory.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Algorithm\QuantConnect.Core.Algorithm.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Api\QuantConnect.Core.Api.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Brokerages\QuantConnect.Core.Brokerages.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Compression\QuantConnect.Core.Compression.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Configuration\QuantConnect.Core.Configuration.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Indicators\QuantConnect.Core.Indicators.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Logging\QuantConnect.Core.Logging.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core\QuantConnect.Core.csproj" />
+  </ItemGroup>
+
+</Project>

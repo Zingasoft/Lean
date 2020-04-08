@@ -800,7 +800,7 @@ namespace QuantConnect.Securities
         /// Adds the specified data subscription to this security.
         /// </summary>
         /// <param name="subscription">The subscription configuration to add. The Symbol and ExchangeTimeZone properties must match the existing Security object</param>
-        internal void AddData(SubscriptionDataConfig subscription)
+        public void AddData(SubscriptionDataConfig subscription)
         {
             if (subscription.Symbol != Symbol) throw new ArgumentException("Symbols must match.", "subscription.Symbol");
             if (!subscription.ExchangeTimeZone.Equals(Exchange.TimeZone)) throw new ArgumentException("ExchangeTimeZones must match.", "subscription.ExchangeTimeZone");

@@ -159,7 +159,7 @@ namespace QuantConnect.Data.Market
         /// Sets the option price model evaluator function to be used for this contract
         /// </summary>
         /// <param name="optionPriceModelEvaluator">Function delegate used to evaluate the option price model</param>
-        internal void SetOptionPriceModel(Func<OptionPriceModelResult> optionPriceModelEvaluator)
+        public void SetOptionPriceModel(Func<OptionPriceModelResult> optionPriceModelEvaluator)
         {
             _optionPriceModelResult = new Lazy<OptionPriceModelResult>(optionPriceModelEvaluator);
         }

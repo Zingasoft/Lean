@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AsyncIO" Version="0.1.69" />
+    <PackageReference Include="NetMQ" Version="4.0.0.207" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="RestSharp" Version="106.10.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuantConnect.Core.Configuration\QuantConnect.Core.Configuration.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Logging\QuantConnect.Core.Logging.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core\QuantConnect.Core.csproj" />
+  </ItemGroup>
+
+</Project>

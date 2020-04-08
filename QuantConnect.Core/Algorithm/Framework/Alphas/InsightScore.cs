@@ -75,7 +75,7 @@ namespace QuantConnect.Algorithm.Framework.Alphas
         /// <param name="type">The score type to be set, Direction/Magnitude</param>
         /// <param name="value">The new value for the score</param>
         /// <param name="algorithmUtcTime">The algorithm's utc time at which time the new score was computed</param>
-        internal void SetScore(InsightScoreType type, double value, DateTime algorithmUtcTime)
+        public void SetScore(InsightScoreType type, double value, DateTime algorithmUtcTime)
         {
             if (IsFinalScore) return;
 

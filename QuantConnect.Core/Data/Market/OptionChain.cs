@@ -35,7 +35,7 @@ namespace QuantConnect.Data.Market
         /// </summary>
         public BaseData Underlying
         {
-            get; internal set;
+            get; set;
         }
 
         /// <summary>
@@ -295,7 +295,7 @@ namespace QuantConnect.Data.Market
         /// Adds the specified auxiliary data to this option chain
         /// </summary>
         /// <param name="baseData">The auxiliary data to be added</param>
-        internal void AddAuxData(BaseData baseData)
+        public void AddAuxData(BaseData baseData)
         {
             var type = baseData.GetType();
             Dictionary<Symbol, List<BaseData>> dictionary;

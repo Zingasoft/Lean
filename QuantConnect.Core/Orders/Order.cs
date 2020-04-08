@@ -82,19 +82,19 @@ namespace QuantConnect.Orders
         /// Gets the utc time the last fill was received, or null if no fills have been received
         /// </summary>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public DateTime? LastFillTime { get; internal set; }
+        public DateTime? LastFillTime { get; set; }
 
         /// <summary>
         /// Gets the utc time this order was last updated, or null if the order has not been updated.
         /// </summary>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public DateTime? LastUpdateTime { get; internal set; }
+        public DateTime? LastUpdateTime { get; set; }
 
         /// <summary>
         /// Gets the utc time this order was canceled, or null if the order was not canceled.
         /// </summary>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public DateTime? CanceledTime { get; internal set; }
+        public DateTime? CanceledTime { get; set; }
 
         /// <summary>
         /// Number of shares to execute.
@@ -171,7 +171,7 @@ namespace QuantConnect.Orders
         /// <summary>
         /// Gets the price data at the time the order was submitted
         /// </summary>
-        public OrderSubmissionData OrderSubmissionData { get; internal set; }
+        public OrderSubmissionData OrderSubmissionData { get; set; }
 
         /// <summary>
         /// Returns true if the order is a marketable order.
@@ -256,7 +256,7 @@ namespace QuantConnect.Orders
         /// Gets a new unique incremental id for this order
         /// </summary>
         /// <returns>Returns a new id for this order</returns>
-        internal int GetNewId()
+        public int GetNewId()
         {
             return Interlocked.Increment(ref _incrementalId);
         }

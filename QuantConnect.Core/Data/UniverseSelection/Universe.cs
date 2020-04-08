@@ -45,7 +45,7 @@ namespace QuantConnect.Data.UniverseSelection
         /// <summary>
         /// Gets the internal security collection used to define membership in this universe
         /// </summary>
-        internal virtual ConcurrentDictionary<Symbol, Member> Securities
+        public virtual ConcurrentDictionary<Symbol, Member> Securities
         {
             get;
             private set;
@@ -291,7 +291,7 @@ namespace QuantConnect.Data.UniverseSelection
         /// <param name="security">The security to be added</param>
         /// <returns>True if the security was successfully added,
         /// false if the security was already in the universe</returns>
-        internal virtual bool AddMember(DateTime utcTime, Security security)
+        public virtual bool AddMember(DateTime utcTime, Security security)
         {
             // never add members to disposed universes
             if (DisposeRequested)
@@ -316,7 +316,7 @@ namespace QuantConnect.Data.UniverseSelection
         /// <param name="security">The security to be removed</param>
         /// <returns>True if the security was successfully removed, false if
         /// we're not allowed to remove or if the security didn't exist</returns>
-        internal virtual bool RemoveMember(DateTime utcTime, Security security)
+        public virtual bool RemoveMember(DateTime utcTime, Security security)
         {
             if (CanRemoveMember(utcTime, security))
             {
@@ -384,7 +384,7 @@ namespace QuantConnect.Data.UniverseSelection
             }
         }
 
-        internal sealed class Member
+        public sealed class Member
         {
             public readonly DateTime Added;
             public readonly Security Security;

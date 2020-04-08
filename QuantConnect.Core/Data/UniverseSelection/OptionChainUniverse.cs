@@ -137,7 +137,7 @@ namespace QuantConnect.Data.UniverseSelection
         /// <param name="security">The security to be added</param>
         /// <returns>True if the security was successfully added,
         /// false if the security was already in the universe</returns>
-        internal override bool AddMember(DateTime utcTime, Security security)
+        public override bool AddMember(DateTime utcTime, Security security)
         {
             // never add members to disposed universes
             if (DisposeRequested)

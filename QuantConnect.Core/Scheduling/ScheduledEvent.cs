@@ -57,7 +57,7 @@ namespace QuantConnect.Scheduling
         /// <summary>
         /// Gets or sets whether this event will log each time it fires
         /// </summary>
-        internal bool IsLoggingEnabled
+        public bool IsLoggingEnabled
         {
             get; set;
         }
@@ -192,7 +192,7 @@ namespace QuantConnect.Scheduling
         /// Fast forwards this schedule to the specified time without invoking the events
         /// </summary>
         /// <param name="utcTime">Frontier time</param>
-        internal void SkipEventsUntil(DateTime utcTime)
+        public void SkipEventsUntil(DateTime utcTime)
         {
             // check if our next event is in the past
             if (utcTime <= _orderedEventUtcTimes.Current) return;

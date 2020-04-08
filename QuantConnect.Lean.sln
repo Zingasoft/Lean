@@ -78,6 +78,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.Algorithm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Brokerages", "QuantConnect.Core.Brokerages\QuantConnect.Core.Brokerages.csproj", "{5C39F737-5A44-4DAB-8667-9B3ED9DEC7DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Jupyter", "QuantConnect.Core.Jupyter\QuantConnect.Core.Jupyter.csproj", "{61D74CF8-FD44-4FF6-8897-7CAC841712A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Queues", "QuantConnect.Core.Queues\QuantConnect.Core.Queues.csproj", "{565EEEFB-FFDC-459A-ACD9-FED191972BF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Messaging", "QuantConnect.Core.Messaging\QuantConnect.Core.Messaging.csproj", "{001B00EC-F299-4005-ABF9-FC2C07F0C2E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Lean.Engine", "QuantConnect.Core.Lean.Engine\QuantConnect.Core.Lean.Engine.csproj", "{14FF2522-5793-4743-81C0-4B8F0A0E6CEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -320,6 +328,38 @@ Global
 		{5C39F737-5A44-4DAB-8667-9B3ED9DEC7DC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5C39F737-5A44-4DAB-8667-9B3ED9DEC7DC}.Release|x64.ActiveCfg = Release|Any CPU
 		{5C39F737-5A44-4DAB-8667-9B3ED9DEC7DC}.Release|x64.Build.0 = Release|Any CPU
+		{61D74CF8-FD44-4FF6-8897-7CAC841712A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D74CF8-FD44-4FF6-8897-7CAC841712A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D74CF8-FD44-4FF6-8897-7CAC841712A0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{61D74CF8-FD44-4FF6-8897-7CAC841712A0}.Debug|x64.Build.0 = Debug|Any CPU
+		{61D74CF8-FD44-4FF6-8897-7CAC841712A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D74CF8-FD44-4FF6-8897-7CAC841712A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61D74CF8-FD44-4FF6-8897-7CAC841712A0}.Release|x64.ActiveCfg = Release|Any CPU
+		{61D74CF8-FD44-4FF6-8897-7CAC841712A0}.Release|x64.Build.0 = Release|Any CPU
+		{565EEEFB-FFDC-459A-ACD9-FED191972BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{565EEEFB-FFDC-459A-ACD9-FED191972BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{565EEEFB-FFDC-459A-ACD9-FED191972BF7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{565EEEFB-FFDC-459A-ACD9-FED191972BF7}.Debug|x64.Build.0 = Debug|Any CPU
+		{565EEEFB-FFDC-459A-ACD9-FED191972BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{565EEEFB-FFDC-459A-ACD9-FED191972BF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{565EEEFB-FFDC-459A-ACD9-FED191972BF7}.Release|x64.ActiveCfg = Release|Any CPU
+		{565EEEFB-FFDC-459A-ACD9-FED191972BF7}.Release|x64.Build.0 = Release|Any CPU
+		{001B00EC-F299-4005-ABF9-FC2C07F0C2E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{001B00EC-F299-4005-ABF9-FC2C07F0C2E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{001B00EC-F299-4005-ABF9-FC2C07F0C2E5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{001B00EC-F299-4005-ABF9-FC2C07F0C2E5}.Debug|x64.Build.0 = Debug|Any CPU
+		{001B00EC-F299-4005-ABF9-FC2C07F0C2E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{001B00EC-F299-4005-ABF9-FC2C07F0C2E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{001B00EC-F299-4005-ABF9-FC2C07F0C2E5}.Release|x64.ActiveCfg = Release|Any CPU
+		{001B00EC-F299-4005-ABF9-FC2C07F0C2E5}.Release|x64.Build.0 = Release|Any CPU
+		{14FF2522-5793-4743-81C0-4B8F0A0E6CEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14FF2522-5793-4743-81C0-4B8F0A0E6CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14FF2522-5793-4743-81C0-4B8F0A0E6CEA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{14FF2522-5793-4743-81C0-4B8F0A0E6CEA}.Debug|x64.Build.0 = Debug|Any CPU
+		{14FF2522-5793-4743-81C0-4B8F0A0E6CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14FF2522-5793-4743-81C0-4B8F0A0E6CEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14FF2522-5793-4743-81C0-4B8F0A0E6CEA}.Release|x64.ActiveCfg = Release|Any CPU
+		{14FF2522-5793-4743-81C0-4B8F0A0E6CEA}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
