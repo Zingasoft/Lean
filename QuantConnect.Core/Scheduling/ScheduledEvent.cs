@@ -136,7 +136,7 @@ namespace QuantConnect.Scheduling
         /// Scans this event and fires the callback if an event happened
         /// </summary>
         /// <param name="utcTime">The current time in UTC</param>
-        internal void Scan(DateTime utcTime)
+        public void Scan(DateTime utcTime)
         {
             if (_endOfScheduledEvents)
             {

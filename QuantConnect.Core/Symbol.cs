@@ -321,7 +321,7 @@ namespace QuantConnect
         /// <param name="sid">The security identifier for this symbol</param>
         /// <param name="value">The current ticker symbol value</param>
         /// <param name="underlying">The underlying symbol</param>
-        internal Symbol(SecurityIdentifier sid, string value, Symbol underlying)
+        public Symbol(SecurityIdentifier sid, string value, Symbol underlying)
         {
             if (value == null)
             {

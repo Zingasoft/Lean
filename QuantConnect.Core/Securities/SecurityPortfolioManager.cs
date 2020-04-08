@@ -52,7 +52,7 @@ namespace QuantConnect.Securities
         /// <summary>
         /// Gets the cash book that keeps track of all currency holdings (only settled cash)
         /// </summary>
-        public CashBook CashBook { get; }
+        public CashBook CashBook { get; set; }
 
         /// <summary>
         /// Gets the cash book that keeps track of all currency holdings (only unsettled cash)

@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="CoarseUniverseGenerator\blacklisted-tickers.txt" />
+    <None Remove="Visualizer\QuantConnect.Visualizer.py" />
+    <None Remove="Visualizer\__init__.py" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="CoarseUniverseGenerator\blacklisted-tickers.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Visualizer\QuantConnect.Visualizer.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Visualizer\__init__.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoinAPI.WebSocket.V1" Version="1.6.1" />
+    <PackageReference Include="DotNetZip" Version="1.13.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="NodaTime" Version="2.4.7" />
+    <PackageReference Include="QuantConnect.pythonnet" Version="1.0.5.30" />
+    <PackageReference Include="SharpZipLib" Version="1.2.0" />
+    <PackageReference Include="SuperSocket.ClientEngine.Core" Version="0.10.0" />
+    <PackageReference Include="Utf8Json" Version="1.3.7" />
+    <PackageReference Include="WebSocket4Net" Version="0.15.2" />
+    <PackageReference Include="WebSocketSharp-netstandard" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuantConnect.Core.Brokerages\QuantConnect.Core.Brokerages.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Compression\QuantConnect.Core.Compression.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Configuration\QuantConnect.Core.Configuration.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Lean.Engine\QuantConnect.Core.Lean.Engine.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Logging\QuantConnect.Core.Logging.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core\QuantConnect.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="AlgoSeekFuturesConverter\AlgoSeek.US.Futures.PriceMultipliers.1.1.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="instruments_dukascopy.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="instruments_fxcm.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="instruments_oanda.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

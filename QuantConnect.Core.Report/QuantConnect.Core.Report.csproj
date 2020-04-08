@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="config.example.json" />
+    <None Remove="css\report.css" />
+    <None Remove="ReportCharts.py" />
+    <None Remove="ReportChartTests.py" />
+    <None Remove="template.crisis.html" />
+    <None Remove="template.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="config.example.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\report.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReportCharts.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReportChartTests.py" />
+    <Content Include="template.crisis.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="template.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Deedle" Version="2.1.2" />
+    <PackageReference Include="FSharp.Core" Version="4.7.1" />
+    <PackageReference Include="MathNet.Numerics" Version="4.9.0" />
+    <PackageReference Include="morelinq" Version="3.3.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="NodaTime" Version="2.4.7" />
+    <PackageReference Include="Python.Runtime.NETStandard" Version="3.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuantConnect.Core.Algorithm\QuantConnect.Core.Algorithm.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Api\QuantConnect.Core.Api.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Brokerages\QuantConnect.Core.Brokerages.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Configuration\QuantConnect.Core.Configuration.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Lean.Engine\QuantConnect.Core.Lean.Engine.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Logging\QuantConnect.Core.Logging.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Messaging\QuantConnect.Core.Messaging.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core\QuantConnect.Core.csproj" />
+  </ItemGroup>
+
+</Project>

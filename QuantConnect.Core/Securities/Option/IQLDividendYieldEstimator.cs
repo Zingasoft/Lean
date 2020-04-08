@@ -28,7 +28,7 @@ namespace QuantConnect.Securities.Option
     /// Defines QuantLib dividend yield estimator for option pricing model. User may define his own estimators, 
     /// including those forward and backward looking ones.
     /// </summary>
-    interface IQLDividendYieldEstimator
+    public interface IQLDividendYieldEstimator
     {
         /// <summary>
         /// Returns current estimate of the stock dividend yield

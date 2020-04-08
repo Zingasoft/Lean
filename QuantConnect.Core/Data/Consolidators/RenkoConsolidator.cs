@@ -187,7 +187,7 @@ namespace QuantConnect.Data.Consolidators
         public Type OutputType => typeof(RenkoBar);
 
         // Used for unit tests
-        internal RenkoBar OpenRenkoBar => new RenkoBar(null, _openOn, _closeOn, _barSize, _openRate, _highRate, _lowRate, _closeRate);
+        public RenkoBar OpenRenkoBar => new RenkoBar(null, _openOn, _closeOn, _barSize, _openRate, _highRate, _lowRate, _closeRate);
 
         private void Rising(IBaseData data)
         {

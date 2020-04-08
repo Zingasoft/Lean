@@ -75,7 +75,7 @@ namespace QuantConnect.Securities
             {
                 return _conversionRate;
             }
-            internal set
+            set
             {
                 _conversionRate = value;
                 OnUpdate();

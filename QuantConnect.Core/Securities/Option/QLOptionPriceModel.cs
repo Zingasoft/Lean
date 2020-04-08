@@ -28,7 +28,7 @@ namespace QuantConnect.Securities.Option
     /// <summary>
     /// Provides QuantLib(QL) implementation of <see cref="IOptionPriceModel"/> to support major option pricing models, available in QL.
     /// </summary>
-    class QLOptionPriceModel : IOptionPriceModel
+    public class QLOptionPriceModel : IOptionPriceModel
     {
         private readonly IQLUnderlyingVolatilityEstimator _underlyingVolEstimator;
         private readonly IQLRiskFreeRateEstimator _riskFreeRateEstimator;

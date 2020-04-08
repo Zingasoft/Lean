@@ -116,7 +116,7 @@ namespace QuantConnect.Securities
         /// Returns universe, filtered by option type
         /// </summary>
         /// <returns></returns>
-        internal OptionFilterUniverse ApplyOptionTypesFilter()
+        public OptionFilterUniverse ApplyOptionTypesFilter()
         {
             // memoization map for ApplyOptionTypesFilter()
             var memoizedMap = new Dictionary<DateTime, bool>();

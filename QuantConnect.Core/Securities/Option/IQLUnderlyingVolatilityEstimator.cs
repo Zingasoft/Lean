@@ -28,7 +28,7 @@ namespace QuantConnect.Securities.Option
     /// Defines QuantLib underlying volatility estimator for option pricing model. User may define his own estimators, 
     /// including those forward and backward looking ones.
     /// </summary>
-    interface IQLUnderlyingVolatilityEstimator
+    public interface IQLUnderlyingVolatilityEstimator
     {
         /// <summary>
         /// Returns current estimate of the underlying volatility

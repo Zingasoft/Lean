@@ -42,7 +42,7 @@ namespace QuantConnect.Orders
         /// <summary>
         /// Order id to process before processing this order.
         /// </summary>
-        public int ContingentId { get; internal set; }
+        public int ContingentId { get; set; }
 
         /// <summary>
         /// Brokerage Id for this order for when the brokerage splits orders into multiple pieces

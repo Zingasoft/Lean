@@ -27,7 +27,7 @@ namespace QuantConnect.Securities.Option
     /// <summary>
     /// Defines QuantLib risk free rate estimator for option pricing model. 
     /// </summary>
-    interface IQLRiskFreeRateEstimator
+    public interface IQLRiskFreeRateEstimator
     {
         /// <summary>
         /// Returns current estimate of the risk free rate
