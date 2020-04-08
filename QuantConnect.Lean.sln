@@ -66,13 +66,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.Configura
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.Api", "QuantConnect.Core.Api\QuantConnect.Core.Api.csproj", "{638141D4-3D20-43EA-906E-F968F15B9EFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Indicators", "QuantConnect.Core.Indicators\QuantConnect.Core.Indicators.csproj", "{94056E9C-38BF-4F47-AABA-69D937D64371}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.Indicators", "QuantConnect.Core.Indicators\QuantConnect.Core.Indicators.csproj", "{94056E9C-38BF-4F47-AABA-69D937D64371}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Algorithm", "QuantConnect.Core.Algorithm\QuantConnect.Core.Algorithm.csproj", "{A443CFE3-25A6-4B1E-8580-1D18D69EEB0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.Algorithm", "QuantConnect.Core.Algorithm\QuantConnect.Core.Algorithm.csproj", "{A443CFE3-25A6-4B1E-8580-1D18D69EEB0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Algorithm.Framework", "QuantConnect.Core.Algorithm.Framework\QuantConnect.Core.Algorithm.Framework.csproj", "{EE409700-BF3B-479B-8EA2-99D2AEF128F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.Algorithm.Framework", "QuantConnect.Core.Algorithm.Framework\QuantConnect.Core.Algorithm.Framework.csproj", "{EE409700-BF3B-479B-8EA2-99D2AEF128F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Algorithm.CSharp", "QuantConnect.Core.Algorithm.CSharp\QuantConnect.Core.Algorithm.CSharp.csproj", "{C221398B-6375-4DF4-8481-12210365446B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.Algorithm.CSharp", "QuantConnect.Core.Algorithm.CSharp\QuantConnect.Core.Algorithm.CSharp.csproj", "{C221398B-6375-4DF4-8481-12210365446B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.AlgorithmFactory", "QuantConnect.Core.AlgorithmFactory\QuantConnect.Core.AlgorithmFactory.csproj", "{77D971C0-0694-4BF2-BB8B-B347ECECAA81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -300,6 +302,14 @@ Global
 		{C221398B-6375-4DF4-8481-12210365446B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C221398B-6375-4DF4-8481-12210365446B}.Release|x64.ActiveCfg = Release|Any CPU
 		{C221398B-6375-4DF4-8481-12210365446B}.Release|x64.Build.0 = Release|Any CPU
+		{77D971C0-0694-4BF2-BB8B-B347ECECAA81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D971C0-0694-4BF2-BB8B-B347ECECAA81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D971C0-0694-4BF2-BB8B-B347ECECAA81}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{77D971C0-0694-4BF2-BB8B-B347ECECAA81}.Debug|x64.Build.0 = Debug|Any CPU
+		{77D971C0-0694-4BF2-BB8B-B347ECECAA81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D971C0-0694-4BF2-BB8B-B347ECECAA81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77D971C0-0694-4BF2-BB8B-B347ECECAA81}.Release|x64.ActiveCfg = Release|Any CPU
+		{77D971C0-0694-4BF2-BB8B-B347ECECAA81}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

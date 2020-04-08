@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NodaTime" Version="2.4.7" />
+    <PackageReference Include="QuantConnect.pythonnet" Version="1.0.5.30" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuantConnect.Core.Algorithm\QuantConnect.Core.Algorithm.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Configuration\QuantConnect.Core.Configuration.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core.Logging\QuantConnect.Core.Logging.csproj" />
+    <ProjectReference Include="..\QuantConnect.Core\QuantConnect.Core.csproj" />
+  </ItemGroup>
+
+</Project>
