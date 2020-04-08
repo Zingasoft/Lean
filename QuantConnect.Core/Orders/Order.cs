@@ -37,7 +37,7 @@ namespace QuantConnect.Orders
         /// <summary>
         /// Order ID.
         /// </summary>
-        public int Id { get; internal set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Order id to process before processing this order.
@@ -47,12 +47,12 @@ namespace QuantConnect.Orders
         /// <summary>
         /// Brokerage Id for this order for when the brokerage splits orders into multiple pieces
         /// </summary>
-        public List<string> BrokerId { get; internal set; }
+        public List<string> BrokerId { get; set; }
 
         /// <summary>
         /// Symbol of the Asset
         /// </summary>
-        public Symbol Symbol { get; internal set; }
+        public Symbol Symbol { get; set; }
 
         /// <summary>
         /// Price of the Order.
@@ -60,18 +60,18 @@ namespace QuantConnect.Orders
         public decimal Price
         {
             get { return _price; }
-            internal set { _price = value.Normalize(); }
+            set { _price = value.Normalize(); }
         }
 
         /// <summary>
         /// Currency for the order price
         /// </summary>
-        public string PriceCurrency { get; internal set; }
+        public string PriceCurrency { get; set; }
 
         /// <summary>
         /// Gets the utc time the order was created.
         /// </summary>
-        public DateTime Time { get; internal set; }
+        public DateTime Time { get; set; }
 
         /// <summary>
         /// Gets the utc time this order was created. Alias for <see cref="Time"/>
@@ -102,7 +102,7 @@ namespace QuantConnect.Orders
         public decimal Quantity
         {
             get { return _quantity; }
-            internal set { _quantity = value.Normalize(); }
+            set { _quantity = value.Normalize(); }
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace QuantConnect.Orders
         /// <summary>
         /// Status of the Order
         /// </summary>
-        public OrderStatus Status { get; internal set; }
+        public OrderStatus Status { get; set; }
 
         /// <summary>
         /// Order Time In Force
@@ -125,7 +125,7 @@ namespace QuantConnect.Orders
         /// Tag the order with some custom data
         /// </summary>
         [DefaultValue(""), JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public string Tag { get; internal set; }
+        public string Tag { get; set; }
 
         /// <summary>
         /// Additional properties of the order
