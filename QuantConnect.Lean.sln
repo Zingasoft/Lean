@@ -76,23 +76,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.Algorithm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.AlgorithmFactory", "QuantConnect.Core.AlgorithmFactory\QuantConnect.Core.AlgorithmFactory.csproj", "{77D971C0-0694-4BF2-BB8B-B347ECECAA81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Brokerages", "QuantConnect.Core.Brokerages\QuantConnect.Core.Brokerages.csproj", "{5C39F737-5A44-4DAB-8667-9B3ED9DEC7DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.Brokerages", "QuantConnect.Core.Brokerages\QuantConnect.Core.Brokerages.csproj", "{5C39F737-5A44-4DAB-8667-9B3ED9DEC7DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Jupyter", "QuantConnect.Core.Jupyter\QuantConnect.Core.Jupyter.csproj", "{61D74CF8-FD44-4FF6-8897-7CAC841712A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.Jupyter", "QuantConnect.Core.Jupyter\QuantConnect.Core.Jupyter.csproj", "{61D74CF8-FD44-4FF6-8897-7CAC841712A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Queues", "QuantConnect.Core.Queues\QuantConnect.Core.Queues.csproj", "{565EEEFB-FFDC-459A-ACD9-FED191972BF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.Queues", "QuantConnect.Core.Queues\QuantConnect.Core.Queues.csproj", "{565EEEFB-FFDC-459A-ACD9-FED191972BF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Messaging", "QuantConnect.Core.Messaging\QuantConnect.Core.Messaging.csproj", "{001B00EC-F299-4005-ABF9-FC2C07F0C2E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.Messaging", "QuantConnect.Core.Messaging\QuantConnect.Core.Messaging.csproj", "{001B00EC-F299-4005-ABF9-FC2C07F0C2E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Lean.Engine", "QuantConnect.Core.Lean.Engine\QuantConnect.Core.Lean.Engine.csproj", "{14FF2522-5793-4743-81C0-4B8F0A0E6CEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.Lean.Engine", "QuantConnect.Core.Lean.Engine\QuantConnect.Core.Lean.Engine.csproj", "{14FF2522-5793-4743-81C0-4B8F0A0E6CEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Report", "QuantConnect.Core.Report\QuantConnect.Core.Report.csproj", "{88B21DA1-64C9-4D08-AC80-D7E2240C35D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.Report", "QuantConnect.Core.Report\QuantConnect.Core.Report.csproj", "{88B21DA1-64C9-4D08-AC80-D7E2240C35D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Tests", "QuantConnect.Core.Tests\QuantConnect.Core.Tests.csproj", "{68F8F270-5C3C-4238-A13A-6CFEE2938298}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.ToolBox", "QuantConnect.Core.ToolBox\QuantConnect.Core.ToolBox.csproj", "{4C00E654-DA6B-4CEC-8D26-23A2C91E9CCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.ToolBox", "QuantConnect.Core.ToolBox\QuantConnect.Core.ToolBox.csproj", "{4C00E654-DA6B-4CEC-8D26-23A2C91E9CCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantConnect.Core.Lean.Launcher", "QuantConnect.Core.Lean.Launcher\QuantConnect.Core.Lean.Launcher.csproj", "{90555417-0E59-4A97-8AF1-5D10326D101C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Lean.Launcher", "QuantConnect.Core.Lean.Launcher\QuantConnect.Core.Lean.Launcher.csproj", "{90555417-0E59-4A97-8AF1-5D10326D101C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantConnect.Core.Tests", "QuantConnect.Core.Tests\QuantConnect.Core.Tests.csproj", "{B94C71FD-51CB-4306-A658-F18676635CE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -376,14 +376,6 @@ Global
 		{88B21DA1-64C9-4D08-AC80-D7E2240C35D7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{88B21DA1-64C9-4D08-AC80-D7E2240C35D7}.Release|x64.ActiveCfg = Release|Any CPU
 		{88B21DA1-64C9-4D08-AC80-D7E2240C35D7}.Release|x64.Build.0 = Release|Any CPU
-		{68F8F270-5C3C-4238-A13A-6CFEE2938298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68F8F270-5C3C-4238-A13A-6CFEE2938298}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{68F8F270-5C3C-4238-A13A-6CFEE2938298}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{68F8F270-5C3C-4238-A13A-6CFEE2938298}.Debug|x64.Build.0 = Debug|Any CPU
-		{68F8F270-5C3C-4238-A13A-6CFEE2938298}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{68F8F270-5C3C-4238-A13A-6CFEE2938298}.Release|Any CPU.Build.0 = Release|Any CPU
-		{68F8F270-5C3C-4238-A13A-6CFEE2938298}.Release|x64.ActiveCfg = Release|Any CPU
-		{68F8F270-5C3C-4238-A13A-6CFEE2938298}.Release|x64.Build.0 = Release|Any CPU
 		{4C00E654-DA6B-4CEC-8D26-23A2C91E9CCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4C00E654-DA6B-4CEC-8D26-23A2C91E9CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C00E654-DA6B-4CEC-8D26-23A2C91E9CCA}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -400,6 +392,14 @@ Global
 		{90555417-0E59-4A97-8AF1-5D10326D101C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{90555417-0E59-4A97-8AF1-5D10326D101C}.Release|x64.ActiveCfg = Release|Any CPU
 		{90555417-0E59-4A97-8AF1-5D10326D101C}.Release|x64.Build.0 = Release|Any CPU
+		{B94C71FD-51CB-4306-A658-F18676635CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B94C71FD-51CB-4306-A658-F18676635CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B94C71FD-51CB-4306-A658-F18676635CE7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B94C71FD-51CB-4306-A658-F18676635CE7}.Debug|x64.Build.0 = Debug|Any CPU
+		{B94C71FD-51CB-4306-A658-F18676635CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B94C71FD-51CB-4306-A658-F18676635CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B94C71FD-51CB-4306-A658-F18676635CE7}.Release|x64.ActiveCfg = Release|Any CPU
+		{B94C71FD-51CB-4306-A658-F18676635CE7}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -21,7 +21,6 @@ using Moq;
 using NodaTime;
 using NUnit.Framework;
 using QuantConnect.Algorithm;
-using QuantConnect.Algorithm.CSharp;
 using QuantConnect.Brokerages;
 using QuantConnect.Brokerages.Backtesting;
 using QuantConnect.Data;
@@ -31,7 +30,6 @@ using QuantConnect.Orders;
 using QuantConnect.Securities;
 using QuantConnect.Data.Market;
 using QuantConnect.Interfaces;
-using QuantConnect.Packets;
 using QuantConnect.Tests.Engine.DataFeeds;
 using QuantConnect.Tests.Engine.Setup;
 using QuantConnect.Util;
@@ -491,15 +489,14 @@ namespace QuantConnect.Tests.Engine.BrokerageTransactionHandlerTests
             transactionHandler.Process(updateRequest);
             Assert.AreEqual(updateRequest.Status, OrderRequestStatus.Processing);
             Assert.IsTrue(updateRequest.Response.IsSuccess);
-            Assert.AreEqual(OrderStatus.Submitted, orderTicket.Status);
+            Assert.AreEqual(orderTicket.Status, OrderStatus.Submitted);
 
             transactionHandler.HandleOrderRequest(updateRequest);
             Assert.IsTrue(updateRequest.Response.IsSuccess);
-            Assert.AreEqual(OrderStatus.UpdateSubmitted, orderTicket.Status);
+            Assert.AreEqual(orderTicket.Status, OrderStatus.Submitted);
 
             Assert.AreEqual(_algorithm.OrderEvents.Count, 2);
-            Assert.IsTrue(_algorithm.OrderEvents[0].Status == OrderStatus.Submitted);
-            Assert.IsTrue(_algorithm.OrderEvents[1].Status == OrderStatus.UpdateSubmitted);
+            Assert.IsTrue(_algorithm.OrderEvents.TrueForAll(orderEvent => orderEvent.Status == OrderStatus.Submitted));
         }
 
         [Test]
@@ -1051,59 +1048,6 @@ namespace QuantConnect.Tests.Engine.BrokerageTransactionHandlerTests
             var order = transactionHandler.GetOrderById(orderTicket.OrderId);
             Assert.IsTrue(order.Tag.Contains("TestTag"));
             Assert.IsTrue(order.Tag.Contains("Warning: fill at stale price"));
-        }
-
-        [Test]
-        public void IncrementalOrderId()
-        {
-            var parameter = new RegressionTests.AlgorithmStatisticsTestParameters(nameof(TestIncrementalOrderIdAlgorithm),
-                new Dictionary<string, string>(),
-                Language.CSharp,
-                AlgorithmStatus.Completed);
-
-            AlgorithmRunner.RunLocalBacktest(parameter.Algorithm,
-                parameter.Statistics,
-                parameter.AlphaStatistics,
-                parameter.Language,
-                parameter.ExpectedFinalStatus,
-                setupHandler: "TestIncrementalOrderIdSetupHandler");
-
-            Assert.AreEqual(10, TestIncrementalOrderIdAlgorithm.OrderEventIds.Count);
-        }
-
-        internal class TestIncrementalOrderIdAlgorithm : OrderTicketDemoAlgorithm
-        {
-            public static readonly Dictionary<int, int> OrderEventIds = new Dictionary<int, int>();
-
-            public override void OnOrderEvent(OrderEvent orderEvent)
-            {
-                if (!OrderEventIds.ContainsKey(orderEvent.OrderId))
-                {
-                    OrderEventIds[orderEvent.OrderId] = orderEvent.Id;
-                    if (orderEvent.Id != 1)
-                    {
-                        throw new Exception("Expected first order event to have id 1");
-                    }
-                }
-                else
-                {
-                    var previous = OrderEventIds[orderEvent.OrderId];
-                    if (orderEvent.Id != (previous + 1))
-                    {
-                        throw new Exception("Expected incremental order event ids");
-                    }
-
-                    OrderEventIds[orderEvent.OrderId] = orderEvent.Id;
-                }
-            }
-        }
-
-        internal class TestIncrementalOrderIdSetupHandler : AlgorithmRunner.RegressionSetupHandlerWrapper
-        {
-            public override IAlgorithm CreateAlgorithmInstance(AlgorithmNodePacket algorithmNodePacket, string assemblyPath)
-            {
-                return Algorithm = new TestIncrementalOrderIdAlgorithm();
-            }
         }
 
         internal class EmptyHistoryProvider : HistoryProviderBase

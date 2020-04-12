@@ -23,7 +23,6 @@ using QuantConnect.Data.Market;
 using QuantConnect.Lean.Engine.DataFeeds;
 using QuantConnect.Lean.Engine.HistoricalData;
 using QuantConnect.Securities;
-using QuantConnect.Util;
 using HistoryRequest = QuantConnect.Data.HistoryRequest;
 
 namespace QuantConnect.Tests.Engine.HistoricalData
@@ -35,12 +34,11 @@ namespace QuantConnect.Tests.Engine.HistoricalData
         public void OptionsAreMappedCorrectly()
         {
             var historyProvider = new SubscriptionDataReaderHistoryProvider();
-            var zipCache = new ZipDataCacheProvider(new DefaultDataProvider());
             historyProvider.Initialize(new HistoryProviderInitializeParameters(
                 null,
                 null,
                 new DefaultDataProvider(),
-                zipCache,
+                new ZipDataCacheProvider(new DefaultDataProvider()), 
                 new LocalDiskMapFileProvider(),
                 new LocalDiskFactorFileProvider(),
                 null,
@@ -81,19 +79,17 @@ namespace QuantConnect.Tests.Engine.HistoricalData
             Assert.AreEqual(28, firstBar.Time.Date.Day);
             Assert.IsTrue(lastBar.Symbol.Value.Contains("FOXA"));
             Assert.AreEqual(2, lastBar.Time.Date.Day);
-            zipCache.DisposeSafely();
         }
 
         [Test]
         public void EquitiesAreMappedCorrectly()
         {
             var historyProvider = new SubscriptionDataReaderHistoryProvider();
-            var zipCache = new ZipDataCacheProvider(new DefaultDataProvider());
             historyProvider.Initialize(new HistoryProviderInitializeParameters(
                 null,
                 null,
                 new DefaultDataProvider(),
-                zipCache,
+                new ZipDataCacheProvider(new DefaultDataProvider()),
                 new LocalDiskMapFileProvider(),
                 new LocalDiskFactorFileProvider(),
                 null,
@@ -121,7 +117,6 @@ namespace QuantConnect.Tests.Engine.HistoricalData
             var firstBar = result.First().Values.Single();
             Assert.IsTrue(firstBar.Symbol.Value.Contains("WMI"));
             Assert.IsNotEmpty(result);
-            zipCache.DisposeSafely();
         }
     }
 }

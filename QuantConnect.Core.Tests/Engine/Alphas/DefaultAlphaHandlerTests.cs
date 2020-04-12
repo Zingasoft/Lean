@@ -79,8 +79,9 @@ namespace QuantConnect.Tests.Engine.Alphas
             var algorithm = new Mock<IAlgorithm>();
             var messagingHandler = new Mock<IMessagingHandler>();
             var api = new Mock<IApi>();
+            var transactionHandler = new Mock<ITransactionHandler>();
 
-            _defaultAlphaHandler.Initialize(packet, algorithm.Object, messagingHandler.Object, api.Object, new BacktestingTransactionHandler());
+            _defaultAlphaHandler.Initialize(packet, algorithm.Object, messagingHandler.Object, api.Object, transactionHandler.Object);
             
             // Act
             _defaultAlphaHandler.ExecuteStoreInsights();
